@@ -445,11 +445,43 @@ margin-bottom: var(--mb-0-5);
   font-size: 1.8rem;
   margin-right: var(--mb-0-25);
 }
-.qualification_data{
+
+
+/* .qualification_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+} 
+
+ .qualification_data{
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
   column-gap: 1.5rem;
+  
+} */
+
+.qualification_sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem; /* Adjust as needed */
+  padding: 2rem;
 }
+
+.qualification_content {
+  display: contents; /* Makes the .qualification_content act as a grid item for .qualification_sections */
+}
+
+.qualification_data {
+  /* No changes needed here for the grid itself, but keep for flexbox layout */
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+
+
+ 
 .qualification_title{
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
