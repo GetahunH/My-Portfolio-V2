@@ -49,3 +49,30 @@ const skillsContent = document.getElementsByClassName('skills_content'),
       skillsHeader.forEach((el)=>{
         el.addEventListener('click',toggleSkills)
       });
+
+      // ################## Services modal ##############3
+
+      const modalViews = document.querySelectorAll('.services_modal')
+            modalBtns = document.querySelectorAll('.services_button')
+            modalCloses = document.querySelectorAll('.services_modal-close')
+
+      let modal = function (modalClick){
+         modalViews[modalClick].classList.add('active-modal')
+      }
+
+      //active modal
+      modalBtns.forEach((modalBtn,i)=>{
+        modalBtn.addEventListener('click',() =>{
+          modal(i)
+        })
+      }) 
+
+      modalCloses.forEach((modalClose)=>{
+        modalClose.addEventListener('click',() =>{
+          modalViews.forEach((modalView)=>{
+            modalView.classList.remove('active-modal')
+          })
+        })
+      }) 
+
+      

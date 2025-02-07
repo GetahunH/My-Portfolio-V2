@@ -549,5 +549,216 @@ margin-bottom: var(--mb-0-5);
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0,0,.15);
+  background-color: rgba(0, 0,0,.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+.services_modal-content{
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+.services_modal-services{
+  row-gap: 3rem;
+}
+.services_modal-services{
+  display: block;
+}
+
+.services_modal-title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1-5);
+}
+.services_modal-close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+.services_modal-icon{
+  color: var(--first-color);
+  margin-right: var(--mb-0-25);
+}
+
+.active-modal{
+  opacity: 1;
+  visibility: visible;
+}
+/* @@@@@@@@@@@@@@@@@@@@@ Portfolio @@@@@@@@@@@@@@@@@@@@2 */
+/* Portfolio Section */
+.portfolio {
+  padding: 2rem 0;
+}
+
+/* Portfolio Container */
+.portfolio_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Portfolio Content */
+.portfolio_content {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio_content:hover {
+  transform: translateY(-5px);
+}
+
+/* Portfolio Image */
+.portfolio_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Portfolio Data */
+.portfolio_data {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.portfolio_title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio_description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* Portfolio Info */
+.portfolio_info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.portfolio_info div {
+  text-align: center;
+}
+
+.portfolio_info-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+}
+
+.portfolio_info-name {
+  font-size: 0.9rem;
+  color: #777;
+}
+.portfolio_buttons {
+  text-align: center;
+}
+
+/* @@@@@@@@@@@@@ Contact @@@@@@@@@@@@2 */
+.contact_container{
+  row-gap: 3rem;
+}
+.contact_information{
+  display: flex;
+  margin-bottom: var(--mb-2);
+}
+
+.contact_icon{
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+}
+.contact_title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+.contact_subtitle{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+.contact_content{
+  background-color: var(--input-color);
+  border-radius: .5rem;
+  padding: .75rem 1rem .25rem;
+}
+
+.contact_label{
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+.contact_input{
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border:none;
+  outline: none;
+  padding: .25rem .5rem .5rem 0;
+}
+/* @@@@@@@@@@@@@@@@@@@@@@ Footer @@@@@@@@@@@@ */
+.footer{
+  padding-top: 2rem;
+}
+.footer_container{
+  row-gap: 3.5rem;
+}
+.footer_bg{
+  background-color: var(--first-color);
+  padding: 2rem 0 3rem;
+}
+.footer_title{
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-0-25);
+}
+.footer_subtitle{
+  font-size: var(--small-font-size);
+}
+.footer_link{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.footer_link:hover{
+  color: var(--first-color-lighter);
+}
+.footer_social{
+  font-size: 1.25rem;
+  margin-right: var(--mb-1-5);
+}
+.footer_social:hover{
+  color: var(--first-color-lighter);
+}
+.footer_copy{
+  font-size: var(--smaller-font-size);
+  text-align: center;
+  color: var(--text-color-light);
+  margin-top: var(--mb-3);
+}
+.footer_title,
+.footer_subtitle,
+.footer_link,
+.footer_social,
+.footer_copy
+{
+  color: #fff;
 }
