@@ -146,30 +146,42 @@ const skillsContent = document.getElementsByClassName('skills_content'),
 
 
 
-            function sendEmail() {
-              const nameInput = document.getElementById("name");
-              const emailInput = document.getElementById("email");
-              const messageInput = document.getElementById("message");
+            function sendEmail(event) {
+              event.preventDefault(); // Prevent form from reloading the page
+          
+              emailjs.init("YOUR_PUBLIC_KEY"); // Initialize EmailJS
+          
+              const serviceID = "YOUR_SERVICE_ID";
+              const templateID = "YOUR_TEMPLATE_ID";
+          
+              // Get form values
+              const templateParams = {
+                  to_name: "Getahun Haftu",  // Fixed or dynamically set recipient name
+                  from_name: document.getElementById("name").value, // Matches {{from_name}}
+                  from_email: document.getElementById("email").value, // Matches {{from_email}}
+                  message: document.getElementById("message").value // Matches {{message}}
+              };
+          
+              // Send the email using EmailJS
+              emailjs.send(serviceID, templateID, templateParams)
+                  .then(response => {
+                      alert("Message sent successfully! ✅");
+                      console.log("Success:", response);
+          
+                      // Clear the form fields after successful submission
+                      document.getElementById("contact-form").reset();
+                  })
+                  .catch(error => {
+                      alert("Failed to send message. ❌ Please try again!");
+                      console.error("Error:", error);
+                  });
+          }
+          
+          // Attach event listener to the form
+          document.getElementById("contact-form").addEventListener("submit", sendEmail);
+          
             
-              const name = nameInput.value;
-              const email = emailInput.value;
-              const message = messageInput.value;
-            
-              if (!name || !email || !message) {
-                alert("Please fill out all fields before sending.");
-                return;
-              }
-            
-              const subject = encodeURIComponent(`Message from ${name}`);
-              const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-            
-              // Open Gmail in a new tab
-              window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=getahun19h@gmail.com&su=${subject}&body=${body}`, '_blank');
-            
-              // Clear the form fields after sending
-              nameInput.value = "";
-              emailInput.value = "";
-              messageInput.value = "";
-            }
-            
-            
+            // Clear the form fields after sending
+            // nameInput.value = "";
+            // emailInput.value = "";
+            // messageInput.value = "";
