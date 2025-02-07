@@ -1118,12 +1118,13 @@ margin-bottom: var(--mb-0-5);
   .portfolio_title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color:var(--first-color);
   }
+  h3{color: var(--first-color);}
   
   .portfolio_description {
     font-size: 1rem;
-    color: #777;
+    /* color: #777; */
     margin-top: 1rem;
   }
   

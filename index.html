@@ -454,7 +454,7 @@
         <div class="portfolio_content">
           <img src="assets/img/Meklle-tour.jpg" alt="Mekelle Travel" class="portfolio_img">
     
-          <div class="portfolio_data one">
+          <div class="portfolio_data">
             <h3 class="portfolio_title">Mekelle Travel – Explore, Plan, Experience</h3>
             <p class="portfolio_description">
               A modern travel guide web app designed to help users explore Mekelle effortlessly. 
@@ -530,7 +530,7 @@
        
              <div>
                  <h3 class="contact_title">Call Me</h3>
-                <span class="contact_subtitle">+251925069004</span>
+                 <a href="tel:+251925069004" class="contact_subtitle">+251925069004</a>
             </div>
           </div>
           <div class="contact_information">
@@ -554,31 +554,30 @@
           </div>
          
 
-         <form action="" class="contact_form grid">
-           <div class="contact_inputs grid">
-
-            <div class="contact_content">
-              <label for="" class="contact_label">Name</label>
-              <input type="text" class="contact_input">
+          <form class="contact_form grid">
+            <div class="contact_inputs grid">
+              <div class="contact_content">
+                <label for="name" class="contact_label">Name</label>
+                <input type="text" id="name" class="contact_input" required>
+              </div>
+          
+              <div class="contact_content">
+                <label for="email" class="contact_label">Email</label>
+                <input type="email" id="email" class="contact_input" required>
+              </div>
+          
+              <div class="contact_content">
+                <label for="message" class="contact_label">Message</label>
+                <textarea id="message" cols="0" rows="7" class="contact_input" required></textarea>
+              </div>
+          
+              <div>
+                <button type="button" class="button button--flex" onclick="sendEmail()">
+                  Send Message <i class="uil uil-message button_icon"></i>
+                </button>
+              </div>
             </div>
-
-            <div class="contact_content">
-              <label for="" class="contact_label">Email</label>
-              <input type="text" class="contact_input">
-            </div>
-
-            <div class="contact_content">
-              <label for="" class="contact_label">Message</label>
-              <textarea name="" cols="0" rows="7" id="" class="contact_input"></textarea>
-            </div>
-            <div>
-              <a href="#" class="button button--flex">
-                Send Message
-                <i class="uil uil-message button_icon"></i>
-              </a>
-            </div>
-           </div>
-         </form>
+          </form>
         </div>
        </section>
      <!-- @@@@@@@@@@@@@@@@@@@@@@@@ Footer @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->

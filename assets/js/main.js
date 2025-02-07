@@ -141,3 +141,35 @@ const skillsContent = document.getElementsByClassName('skills_content'),
                 localStorage.setItem('selected-theme', getCurrentTheme())
                 localStorage.setItem('selected-icon', getCurrentIcon())
             })
+
+
+
+
+
+            function sendEmail() {
+              const nameInput = document.getElementById("name");
+              const emailInput = document.getElementById("email");
+              const messageInput = document.getElementById("message");
+            
+              const name = nameInput.value;
+              const email = emailInput.value;
+              const message = messageInput.value;
+            
+              if (!name || !email || !message) {
+                alert("Please fill out all fields before sending.");
+                return;
+              }
+            
+              const subject = encodeURIComponent(`Message from ${name}`);
+              const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+            
+              // Open Gmail in a new tab
+              window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=getahun19h@gmail.com&su=${subject}&body=${body}`, '_blank');
+            
+              // Clear the form fields after sending
+              nameInput.value = "";
+              emailInput.value = "";
+              messageInput.value = "";
+            }
+            
+            
