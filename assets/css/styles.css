@@ -213,6 +213,14 @@ img{
 .show-menu{
   bottom: 0;
 }
+/* Active link */
+.active-link{
+  color: var(--first-color);
+}
+/* change background header */
+.scroll-header{
+  box-shadow: 0 -1px 4px rgba(0, 0,0,.15);
+}
 /* @@@@@@@@@@@@@@ Home @@@@@@@@@@@@@@@@@@@@ */
 .home_container{
   gap: 1rem;
@@ -762,3 +770,34 @@ margin-bottom: var(--mb-0-5);
 {
   color: #fff;
 }
+/* @@@@@@@@@@@ scroll up @@@@@@@@@2 */
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: 20%;
+  background-color:greenyellow;
+  opacity: .8;
+  padding: 0 .3rem;
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+}
+.scrollup:hover{
+   background-color: var(--first-color);
+}
+.scrollup_icon{
+  font-size: 1.5rem;
+  color: #fff;
+}
+/* show scroll */
+
+#scroll-up {
+  position: fixed;  /* Ensure it moves */
+  right: 2rem;  /* Adjust as needed */
+  bottom: -5rem; /* Hide initially */
+  transition: bottom 0.3s ease-in-out;
+}
+.show-scroll{
+  bottom: 5rem;
+}
+
