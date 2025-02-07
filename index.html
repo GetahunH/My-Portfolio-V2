@@ -77,26 +77,20 @@
               <i class="uil uil-github-alt"></i>
             </a>
           </div>
+
           <div class="home_img">
-            <svg class="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <mask id="mask0" mask-type="alpha">
-                  <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                  130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                  97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                  0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-              </mask>
-              <g mask="url(#mask0)">
-                  <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                  165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                  129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                  -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                  <image class="home_blob-img"
-                  
-                  xlink:href="assets/img/G3.jpg"/>
-              </g>
-          </svg>
-          
-          </div>
+            <svg class="home_blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <mask id="roundedRectMask">
+                    <rect x="10" y="10" width="180" height="180" rx="40" ry="40" fill="white"/>
+                </mask>
+                <g mask="url(#roundedRectMask)">
+                    <rect x="10" y="10" width="180" height="180" fill="black"/>
+                    <image class="home_blob-img" x="0" y="0" width="200" height="200" xlink:href="assets/img/G3.jpg"/>
+                </g>
+            </svg>
+        </div>
+        
+ 
 
           <div class="home_data">
             <h1 class="home_title">Hi, I'm Getahun</h1>
@@ -110,7 +104,7 @@
          <div class="home_scroll">
            <a href="#about" class="home_scroll-button button--flex">
             <i class="uil uil-mouse-alt home_scroll-mouse"></i>
-            <span class="home_scroll-name">Scroll Down</span>
+            <!-- <span class="home_scroll-name">Scroll Down</span> -->
             <i class="uil uil-arrow-down home_scroll-down"></i>
            </a>
          </div>
@@ -120,8 +114,7 @@
   <!-- @@@@@@@@@@@@@@@@@@@@@@@@ About @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
      <section class="about section" id="about">
       <h2 class="section_title">About Me</h2>
-      <span class="section_subtitle">My introduction</span>
-
+      <!-- <span class="section_subtitle">Who I Am</span> -->
       <div class="about_container container grid">
         <img src="assets/img/G1.jpg" alt="" class="about_img">
 
@@ -134,7 +127,7 @@
               <span class="about_info-name">Years <br> experience </span>
             </div>
             <div>
-              <span class="about_info-title">10+</span>
+              <span class="about_info-title">5+</span>
               <span class="about_info-name">Completed <br> Projects </span>
             </div>
           </div>
@@ -428,19 +421,19 @@
                 <li class="services_modal-services">
 
                   <i class="uil uil-check-circle services_modal-icon"></i>
-                     <p>I develop the user interface.</p>
+                     <p>Build responsive, interactive web pages .</p>
                   </li>
                   
                   <i class="uil uil-check-circle services_modal-icon"></i>
-                     <p>Web page development.</p>
+                     <p>Integrate UX elements into functional designs.</p>
                   </li>
                   
                   <i class="uil uil-check-circle services_modal-icon"></i>
-                     <p>I create ux elements.</p>
+                     <p>Ensure seamless performance across devices.</p>
                   </li>
                   
                   <i class="uil uil-check-circle services_modal-icon"></i>
-                     <p>I positin you campany brand.</p>
+                     <p>Maintain consistent branding on the website.</p>
                   </li>
                   
               </ul>
@@ -461,7 +454,7 @@
         <div class="portfolio_content">
           <img src="assets/img/Meklle-tour.jpg" alt="Mekelle Travel" class="portfolio_img">
     
-          <div class="portfolio_data">
+          <div class="portfolio_data one">
             <h3 class="portfolio_title">Mekelle Travel – Explore, Plan, Experience</h3>
             <p class="portfolio_description">
               A modern travel guide web app designed to help users explore Mekelle effortlessly. 
@@ -470,8 +463,9 @@
     
             <div class="portfolio_info">
               <div>
-                <span class="portfolio_info-title">HTML, CSS, JavaScript</span>
-                <span class="portfolio_info-name">Tech Stack</span>
+                <span class="portfolio_info-title">HTML, CSS,React js</span>
+                <span class="portfolio_info-title">Node js,MySQL</span>
+                <!-- <span class="portfolio_info-name">Tech Stack</span> -->
               </div>
               <div>
                 <span class="portfolio_info-title">🚀</span>
@@ -500,8 +494,9 @@
     
             <div class="portfolio_info">
               <div>
-                <span class="portfolio_info-title">HTML, CSS, React, MySQL</span>
-                <span class="portfolio_info-name">Tech Stack</span>
+                <span class="portfolio_info-title">HTML, CSS, React js</span>
+                <span class="portfolio_info-title">Spring boot,JWT,PostgrSQL</span>
+                <!-- <span class="portfolio_info-name">Tech Stack</span> -->
               </div>
               <div>
                 <span class="portfolio_info-title">⚡</span>
@@ -527,9 +522,9 @@
 
 
         <div class="contact_container container grid">
-         <div>
+        
 
-
+          <div class="contact_info">
           <div class="contact_information">
             <i class="uil uil-phone contact_icon"></i>
        
@@ -556,7 +551,9 @@
             </div>
           </div>
 
-         </div>
+          </div>
+         
+
          <form action="" class="contact_form grid">
            <div class="contact_inputs grid">
 

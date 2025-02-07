@@ -496,55 +496,103 @@ margin-bottom: var(--mb-0-5);
   margin-right: var(--mb-0-25);
 }
 
-/* .qualification_sections {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+
+
+.qualification_sections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create a 2-column grid */
+  gap: 2rem;
+  position: relative;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 10px;
 }
 
 .qualification_content {
   display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 2rem;  
-  width: 100%;
-  max-width: 768px; 
-} */
- .qualification_data{
-  display: grid;
-  grid-template-columns: 1fr max-content 1fr;
-  column-gap: 1.5rem;
-  /* align-items: center; */
-  
+  gap: 1.5rem;
 }
 
-.qualification_title{
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-}
-.qualification_subtitle{
-  display: inline;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-1);
+.qualification_data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  margin-left: 30px;
+  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.qualification_calendar{
-  font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+.qualification_data:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-.qualification_rounder{
-  display: inline-block;
-  width: 13px;
-  height:13px;
-  background-color: var(--first-color);
-  border-radius: 50%;
+
+.qualification_tile {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
 }
-.qualification_line{
-  display: block;
-  width: 1px;
-  height: 100%;
-  background-color: var(--first-color);
-  transform: translate(6px, -7px);
+
+.qualification_subtitle {
+  font-size: 1.1rem;
+  color: #777;
 }
+
+.qualification_calendar {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+.qualification_icon {
+  margin-right: 0.8rem;
+  color: #00bfae;
+}
+
+
+
+/* Zigzag layout for odd/even items */
+.qualification_data:nth-child(odd) {
+  grid-column: 1; /* Left side for odd items */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.qualification_data:nth-child(even) {
+  grid-column: 2; /* Right side for even items */
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.qualification_data:nth-child(odd) .qualification_rounder {
+  left: -8px; /* Left for odd items */
+}
+
+.qualification_data:nth-child(even) .qualification_rounder {
+  right: -8px; /* Right for even items */
+}
+
+.qualification_data:nth-child(odd) .qualification_line {
+  left: 50%;
+}
+
+.qualification_data:nth-child(even) .qualification_line {
+  left: 50%;
+}
+
+
+
+
+
+
 /* ################### Services #################### */
 .services_container{
   gap: 1.rem;
@@ -976,7 +1024,7 @@ margin-bottom: var(--mb-0-5);
    .about_info{
     justify-content: space-between;
    }
-   .about_buttons{
+   .about_button{
     justify-content: initial;
    }
    .qualification_tabs{
@@ -1007,6 +1055,16 @@ margin-bottom: var(--mb-0-5);
    .portfolio_content{
     align-items: center;
    }
+
+   
+
+
+
+
+
+
+   
+
    .footer_container{
     grid-template-columns: repeat(3,1fr);
    }
@@ -1026,6 +1084,102 @@ margin-bottom: var(--mb-0-5);
 }
 /* ##################### for large devices ############*/
 @media screen and (min-width:1024px) {
+  
+
+
+
+  .portfolio_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:2rem;
+  }
+  
+  /* Portfolio Item */
+  .portfolio_content {
+    width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .portfolio_img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .portfolio_data {
+    padding: 1.5rem;
+  }
+  
+  .portfolio_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .portfolio_description {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 1rem;
+  }
+  
+  .portfolio_buttons .button {
+    display: flex;
+    align-items: center;
+    /* background-color: #00bfae; */
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .button:hover {
+    background-color: var(--first-color-alt);
+  }
+
+
+
+     .home{
+      margin-top: -40px;
+     }
+  .home_content {
+    display: flex;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.home_social {
+  order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures icons are centered */
+    justify-self: start; /* Aligns it with home_data */
+}
+  .about{
+    margin-top: 15px;
+  }
+.home_data {
+  order: 2;
+    text-align: left; /* Ensures proper alignment */
+}
+
+.home_img {
+  order: 3;
+    
+}
+
+        .about_img {
+          grid-column: 1;
+      }
+      
+      .about_data {
+          grid-column: 2;
+      }
     .header,
     .main,
     .footer_container{
@@ -1037,16 +1191,87 @@ margin-bottom: var(--mb-0-5);
     .home_social{
       transform: translateX(-6rem);
     }
+    
     .services_container{
-      grid-template-columns: repeat(3,238px);
+      margin-left: 350px;
+      grid-template-columns: repeat(2,338px);
     }
-    .portfolio_content{
-      column-gap: 5rem;
+    .services_content{
+      width: 300px;
+      height: 330px;
     }
+   
+    .portfolio_title{
+      color: var(--first-color);
+    }
+    /* .portfolio_content{
+      width: 350px;
+      
+    } */
+    
     .contact_form{
       width: 460px;
     }
-    .contact_inputs{
-      grid-template-columns: repeat(2,1fr);
+    .contact_input{
+      grid-template-columns: repeat(2,2fr);
     }
+
+}
+
+
+.contact_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns, left for contact info, right for form */
+  gap: 2rem; /* Add space between columns */
+  align-items: start; /* Align items at the start of the container */
+}
+
+.contact_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_information {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact_icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.contact_form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact_inputs {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact_input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .contact_container {
+      grid-template-columns: 1fr; /* Stack the contact info and form on smaller screens */
+  }
 }
