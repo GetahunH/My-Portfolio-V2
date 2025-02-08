@@ -83,7 +83,10 @@
 .change-theme:hover{
   color: var(--first-color);
 }
-
+body{
+  padding: 0;
+  margin: 0;
+}
 
 *{
   box-sizing: border-box;
@@ -212,6 +215,8 @@ img{
   display: flex; 
   flex-direction: column;
   align-items: center;
+    /* justify-content: center;
+    text-align: center; */
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
@@ -353,8 +358,6 @@ img{
 }
 /* @@@@@@@@@@@@@@@@@@ About @@@@@@@ */
 .about_img{
-  border: 4px solid #00bfae; /* Border with color */
-  border-radius: 10px; /* Optional: Rounded corners */
   width: 150px;
   border-radius: .5rem;
   justify-self: center;
@@ -497,7 +500,6 @@ margin-bottom: var(--mb-0-5);
   margin-right: var(--mb-0-25);
 }
 
-
 .qualification_sections {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Create a 2-column grid */
@@ -586,177 +588,6 @@ margin-bottom: var(--mb-0-5);
 
 .qualification_data:nth-child(even) .qualification_line {
   left: 50%;
-}
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@#############################@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-@media screen and (max-width: 767px) {
-
-  .home_content {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column */
-    grid-template-areas: 
-        "image"
-        "data"
-        "social"
-        "button"; 
-    /* gap: 2rem; */
-    margin-bottom: -3rem;
-}
-.home_description {
-  max-width: 300px; 
-}
-.home_img {
-  margin-left: 4rem;
-  margin-top: -3rem;
-    grid-area: image; /* Assign to grid area */
-}
-
-.home_data {
-  margin-left: 1.5rem;
-    grid-area: data;
-}
-
-.home_social{
-    grid-area: social;
-    display: flex; /* keep your flex properties */
-    justify-content: center;
-    gap: 3rem;
-    margin-bottom: 2rem;
-}
-.home_social-icon {  /* This is the crucial missing part */
-  
-  width: 3rem;      
-  height: 3rem;      
-  display: inline-flex; 
-  align-items: center; 
-  justify-content: center; 
-  margin: 0.5rem;   
-}
-
-.button.button--flex {
-    grid-area: button;
-    max-width: 150px;
-    margin: 0 auto;
-    margin-left: 3.5rem;
-}
-  
-
-
-  .about_container {
-    display: block;
-    grid-template-columns: 1fr; /* Switch to a single-column layout */
-    text-align: center; /* Center the text */
-  }
-
-  .about_img {
-    border: 4px solid #00bfae; /* Border with color */
-    border-radius: 10px; /* Optional: Rounded corners */
-    width: 100%; /* Make image responsive */
-    max-width: 250px; /* Set a max width */
-    margin: 0 auto; /* Center the image */
-    display: block;
-  }
-
-  .about_data {
-    
-    padding-top: 1rem; /* Add space between image and text */
-  }
-
-  .about_info {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem; /* Space between items */
-    flex-wrap: wrap; /* Wrap if needed */
-  }
-
-  .about_buttons {
-    display: flex;
-    justify-content: center;
-  }
-
-
-  .footer_socials {
-    margin-top: 1rem; /* Adds space above */
-  }
-  .home_blob{
-    width: 150px;
-  }
-    footer{
-      margin-left: 30px;
-      margin-right: 40px;
-    }
-  .footer_container{
-    display: flex;
-    flex-wrap: wrap;
-   }
-   .footer-title, .footer-link {
-    flex: 1; /* Let them take equal width */
-    justify-content: center;
-  }
-
-   .footer-title{
-    margin-left: -1rem;
-    margin-right: 1rem;
-   }
-  .header{
-    margin-left: 30px;
-    width: 75%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: var(--z-fixed);
-    background-color: var(--body-color);
-  }
-
-  .portfolio_content {
-    width: 320px;
-    margin-left: 15px;
-    color: var(--first-color);
-  }
-  .portfolio_title{
-    color: green;
-  }
-  .contact_container {
-    display: flex;
-    flex-direction: column; 
-    gap: 1rem; /* Reduce the space between stacked sections */
-  }
-
-  .skills_container{
-    display: block;
-    grid-template-columns: 1fr;
-  }
-  .qualification_sections {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-
-  .qualification_data {
-    width: 100%;
-    margin-left: 0;
-    padding: 1rem;
-    text-align: left;
-  }
-
-  /* Remove Zigzag styles */
-  .qualification_data:nth-child(odd),
-  .qualification_data:nth-child(even) {
-    grid-column: auto;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .qualification_data:nth-child(odd) .qualification_rounder,
-  .qualification_data:nth-child(even) .qualification_rounder {
-    left: auto;
-    right: auto;
-  }
-
-  .qualification_data:nth-child(odd) .qualification_line,
-  .qualification_data:nth-child(even) .qualification_line {
-    left: auto;
-  }
 }
 
 
@@ -977,7 +808,6 @@ margin-bottom: var(--mb-0-5);
 }
 .footer_container{
   width: 80%;
-  margin-left: 50px;
   row-gap: 3.5rem;
 }
 .footer_bg{
@@ -1263,7 +1093,7 @@ margin-bottom: var(--mb-0-5);
    }
 }
 /* ##################### for large devices ############*/
-@media screen and (min-width:1024px) {
+/* @media screen and (min-width:1024px) {
   .portfolio_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1293,7 +1123,7 @@ margin-bottom: var(--mb-0-5);
   .portfolio_title {
     font-size: 1.5rem;
     font-weight: bold;
-    /* color:var(--first-color); */
+    color:var(--first-color);
   }
   h3{color: var(--first-color);}
   
@@ -1302,15 +1132,14 @@ margin-bottom: var(--mb-0-5);
     margin-top: 1rem;
   }
   
-
-  .portfolio_buttons .button {  /* Selects the button specifically */
-    display: inline-flex;     /* Enables flexbox for alignment */
-    align-items: center;    /* Vertically centers content */
-    justify-content: center; /* Horizontally centers content */
-  }
-  
-  .portfolio_buttons .button .button_icon { /* Selects the icon */
-    margin-left: 0.5rem;   /* Adds space between text and icon */
+  .portfolio_buttons .button {
+    display: flex;
+    align-items: center;
+    
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
   }
   
   .button:hover {
@@ -1441,6 +1270,52 @@ margin-bottom: var(--mb-0-5);
     
     
 
+} */
+
+
+
+
+
+
+
+
+footer{
+  margin-left: 30px;
+}
+.footer_container{
+flex-wrap: wrap;
+margin-right: 10rem;
+}
+.footer-title, .footer-link {
+flex: 1; 
+justify-content: center;
+}
+
+.footer-title{
+margin-left: -2rem;
+margin-right: 2rem;
 }
 
 
+
+
+.home_content {
+  display: block;
+  grid-template-columns: 1fr; /* Single column layout */
+}
+
+.home_img {
+  order: 1; /* Image first */
+}
+
+.home_data {
+  order: 2; /* Content second */
+}
+
+.home_social {
+  order: 3; /* Social icons third */
+}
+
+.button.button--flex {
+  order: 4; /* Contact button fourth */
+}
