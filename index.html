@@ -8,6 +8,17 @@
   <title>portfolio website</title>
 <link rel="stylesheet" href="assets/css/styles.css">
 <!-- <link rel="stylesheet" href="assets/css/styles2.css"> -->
+ <!-- ################ to use emailjs ##################### -->
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+            </script>
+            <script type="text/javascript">
+            (function(){
+            emailjs.init({
+            publicKey: "rsLHqIAeGOohtsGrL",
+            });
+            })();
+    </script>
 </head>
 <body>
   <!-- @@@@@@@@@@@@@@@@@@@@@@@@ Header @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
@@ -574,7 +585,7 @@
               </div>
           
               <div>
-                <button type="button" class="button button--flex" onclick="sendEmail()">
+                <button type="submit" class="button button--flex" onclick="sendEmail()">
                   Send Message <i class="uil uil-message button_icon"></i>
                 </button>
               </div>
