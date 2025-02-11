@@ -144,10 +144,15 @@ const skillsContent = document.getElementsByClassName('skills_content'),
                       .then((response) => {
                         alert("Message sent successfully! ✅");
                         console.log("Success:", response);
+                         // Clear the form fields AFTER successful submission:
+                          document.getElementById('name').value = "";
+                          document.getElementById('email').value = "";
+                          document.getElementById('message').value = "";
                       })
                       .catch((error) => {
                         alert("Failed to send message. ❌");
                         console.error("Error:", error);
+
                       });
                   }
               // Clear the form fields after successful submission
